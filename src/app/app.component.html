@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row text-center bg-light">
+    <div class="col-md-12"><h3>Encoded To Json Format</h3></div>
+  </div>
+
+  
+  <div class="pt-2">
+    <div class="row mx-2 pb-2">
+      <textarea type="text" class="form-control bg-dark text-light" style="min-height: 200px;" [(ngModel)]="inputText" (input)="inputValue($event)" placeholder="Enter your base64 content..."></textarea>
+    </div>
+    <div class="row mx-2">
+      <div class="form-control h-100">
+        <!-- https://www.npmjs.com/package/ngx-json-viewer -->
+        <span *ngIf="!isJson;else elseBlock" class="text-danger">{{ outputText }}</span>
+        <ng-template #elseBlock>
+          <ngx-json-viewer [json]="outputText"></ngx-json-viewer>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

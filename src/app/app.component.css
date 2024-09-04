@@ -1,0 +1,13 @@
+:root{
+--ngx-json-key: white !important; 
+--ngx-json-string:yellow;
+}
+
+.body-height{
+    height: 550px;
+    overflow: auto;
+}
+
+::ng-deep .segment-key{
+    color:var(--ngx-json-key);
+}
